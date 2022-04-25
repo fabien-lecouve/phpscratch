@@ -1,0 +1,55 @@
+create TABLE event_type
+(
+	id_event_type INT not null AUTO_INCREMENT,
+ 	name varchar(100) not null,
+ 	PRIMARY KEY (id_event_type)
+);
+
+create TABLE event
+(
+    	id_event INT not null AUTO_INCREMENT,
+ 	name varchar(100) not null,
+ 	start_registration datetime not null,
+ 	end_registration datetime not null,
+ 	event_date datetime not null,
+ 	event_place varchar(100) not null,
+    	id_event_type INT,
+ 	PRIMARY KEY (id_event),
+ 	FOREIGN KEY (id_event_type) REFERENCES event_type(id_event_type)
+);
+
+create TABLE promoter
+(
+    	id_promoter INT not null AUTO_INCREMENT,
+ 	name varchar(100) not null,
+    	adress varchar(200) not null,
+    	zip varchar(50) not null,
+    	city varchar(100) not null,
+    	country varchar(100) not null,
+    	siret varchar(100) not null,
+    	legal_status varchar(100) not null,
+ 	creation_time datetime not null,
+ 	PRIMARY KEY (id_promoter)
+);
+
+create TABLE role
+(
+	id_role INT not null AUTO_INCREMENT,
+ 	name varchar(100) not null,
+ 	PRIMARY KEY (id_role)
+);
+
+create TABLE admin
+(
+    	id_admin INT not null AUTO_INCREMENT,
+ 	lastname varchar(100) not null,
+    	firstname varchar(100) not null,
+    	email varchar(100) not null,
+    	password varchar(255) not null,
+ 	creation_time datetime not null,
+    	id_role INT,
+    	id_promoter INT,
+ 	PRIMARY KEY (id_admin),
+ 	FOREIGN KEY (id_role) REFERENCES role(id_role),
+    	FOREIGN KEY (id_promoter) REFERENCES promoter(id_promoter)
+);

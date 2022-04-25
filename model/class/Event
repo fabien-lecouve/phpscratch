@@ -1,0 +1,183 @@
+<?php
+
+class Event {
+    private ?int $idEvent;
+    private ?string $name;
+    private ?string $startRegistration;
+    private ?string $endRegistration;
+    private ?string $eventDate;
+    private ?string $eventPlace;
+    private ?int $idEventType;
+    private EventType $EventType;
+
+    public function __construct($idEvent, $name, $startRegistration, $endRegistration, $eventDate, $eventPlace, $idEventType)
+    {
+        $this->idEvent = $idEvent;
+        $this->name = $name;
+        $this->startRegistration = $startRegistration;
+        $this->endRegistration = $endRegistration;
+        $this->eventDate = $eventDate;
+        $this->eventPlace = $eventPlace;
+        $this->idEventType = $idEventType;
+    }
+
+    /**
+     * Get the value of idEvent
+     */ 
+    public function getIdEvent()
+    {
+        return $this->idEvent;
+    }
+
+    /**
+     * Set the value of idEvent
+     *
+     * @return  self
+     */ 
+    public function setIdEvent($idEvent)
+    {
+        $this->idEvent = $idEvent;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of name
+     */ 
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set the value of name
+     *
+     * @return  self
+     */ 
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of startRegistration
+     */ 
+    public function getStartRegistration()
+    {
+        return $this->startRegistration;
+    }
+
+    /**
+     * Set the value of startRegistration
+     *
+     * @return  self
+     */ 
+    public function setStartRegistration($startRegistration)
+    {
+        $this->startRegistration = $startRegistration;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of endRegistration
+     */ 
+    public function getEndRegistration()
+    {
+        return $this->endRegistration;
+    }
+
+    /**
+     * Set the value of endRegistration
+     *
+     * @return  self
+     */ 
+    public function setEndRegistration($endRegistration)
+    {
+        $this->endRegistration = $endRegistration;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of eventDate
+     */ 
+    public function getEventDate()
+    {
+        return $this->eventDate;
+    }
+
+    /**
+     * Set the value of eventDate
+     *
+     * @return  self
+     */ 
+    public function setEventDate($eventDate)
+    {
+        $this->eventDate = $eventDate;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of eventPlace
+     */ 
+    public function getEventPlace()
+    {
+        return $this->eventPlace;
+    }
+
+    /**
+     * Set the value of eventPlace
+     *
+     * @return  self
+     */ 
+    public function setEventPlace($eventPlace)
+    {
+        $this->eventPlace = $eventPlace;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of idEventType
+     */ 
+    public function getIdEventType()
+    {
+        return $this->idEventType;
+    }
+
+    /**
+     * Set the value of idEventType
+     *
+     * @return  self
+     */ 
+    public function setIdEventType($idEventType)
+    {
+        $this->idEventType = $idEventType;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of EventType
+     */ 
+    public function getEventType()
+    {
+        return $this->EventType;
+    }
+
+    /**
+     * Set the value of EventType
+     *
+     * @return  self
+     */ 
+    public function setEventType($EventType)
+    {
+        $this->EventType = $EventType;
+
+        return $this;
+    }
+}

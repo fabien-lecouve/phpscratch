@@ -1,0 +1,52 @@
+<?php 
+
+class EventType {
+    private int $idEventType;
+    private string $name;
+    
+    public function __construct($idEventType, $name)
+    {
+        $this->idEventType = $idEventType;
+        $this->name = $name;
+    }
+
+    /**
+     * Get the value of idEventType
+     */ 
+    public function getIdEventType()
+    {
+        return $this->idEventType;
+    }
+
+    /**
+     * Set the value of idEventType
+     *
+     * @return  self
+     */ 
+    public function setIdEventType($idEventType)
+    {
+        $this->idEventType = $idEventType;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of name
+     */ 
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set the value of name
+     *
+     * @return  self
+     */ 
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+}
